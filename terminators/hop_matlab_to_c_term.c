@@ -13,7 +13,7 @@ char* RetrieveString(char* label, int* depth) {
 	return retval;
 }
 
-void ReleaseString(const char* cptr) { 
+void ReleaseString(char* cptr) { 
 	free(cptr);
 }
 

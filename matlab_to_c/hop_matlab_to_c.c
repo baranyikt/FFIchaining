@@ -1,5 +1,10 @@
 #include "mex.h"
 
+#pragma comment(lib, "c_to_rust.lib")			// linking against the Rust library
+#pragma comment(lib, "ws2_32.lib")				// Rust static library has external links to these libraries
+#pragma comment(lib, "userenv.lib")				//	these are listed here to avoid link time errors
+#pragma comment(lib, "advapi32.lib")
+
 #define		ARG_OUT_STR		plhs[0]
 #define		ARG_OUT_NUM		plhs[1]
 #define		ARG_IN_PREFIX	prhs[0]
